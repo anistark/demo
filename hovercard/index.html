@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Hovercard Demo</title>
+		<style type="text/css">
+			body
+			{
+			    font-family:Sans-serif;
+			    font-size:13px;
+			    padding:20px;    
+			}
+			.hc-name, a{ color: #1de2d1}
+			.highlight{padding:5px; background:#aaddaa;margin-bottom:10px;font-weight:bold;}
+		</style>
+	</head>
+	<body>
+		<h1>A very simple example of the use of hovercard.</h1>
+		<div class="highlight">Hover over my name.</div>
+		This demo was prepared by <label id="profile">Kumar Anirudha</label>.<br />
+		For Demo purposes. Blah blah. Fill up anything you like.<br /><br />Open Source Enthusiast. 
+	</body>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.hovercard.min.js"></script>
+	<script type="text/javascript">
+		var aboutMe = {
+		    name: "Kumar Anirudha",
+		    link: "http://anistark.github.io/blog/",
+		    bio: "Kumar Anirudha is a freelance Web-devloper and blogger. This is only for demo purpose only. You are free to Fork it and use and your own risk.",
+		    image: "http://www.gravatar.com/avatar/956e7358fe55faf73f6a8864745334e2.png",
+		    website: "http://anistark.github.io/", 
+		    email: "anirudhastark@yahoo.com"
+		};
+
+		$('#profile').hovercard({
+		    showCustomCard: true, 
+		    customCardJSON: aboutMe
+		});
+	</script>
+</html>
